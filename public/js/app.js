@@ -1,6 +1,6 @@
 class ProductList extends React.Component {
     handleProductUpVote(productId) {
-        console.log(productId + 'was upvoted.')
+        console.log(productId + ' was upvoted.')
     }
     render () {
         const products = Seed.products.sort((a,b) => (
@@ -28,6 +28,10 @@ class ProductList extends React.Component {
 }
 
 class Product extends React.Component {
+    constructor(props) {
+        super(props)
+        this.handleUpVote = this.handleUpVote.bind(this)
+    }
         // Inside `Product`
     handleUpVote() {
         this.props.onVote(this.props.id);
