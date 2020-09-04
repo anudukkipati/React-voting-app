@@ -53,13 +53,13 @@ class ProductList extends React.Component {
 }
 
 class Product extends React.Component {
-    constructor(props) {
-        super(props)
-        this.handleUpVote = this.handleUpVote.bind(this)
-    }
+    // constructor(props) {
+    //     super(props)
+    //     this.handleUpVote = this.handleUpVote.bind(this)
+    // }
         // Inside `Product`
     handleUpVote = () => (
-        this.props.onVote(this.props.id);
+        this.props.onVote(this.props.id)
     );
     render() {
         return (
