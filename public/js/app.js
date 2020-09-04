@@ -58,9 +58,9 @@ class Product extends React.Component {
         this.handleUpVote = this.handleUpVote.bind(this)
     }
         // Inside `Product`
-    handleUpVote() {
+    handleUpVote = () => (
         this.props.onVote(this.props.id);
-    }
+    );
     render() {
         return (
             <div className='item'>
